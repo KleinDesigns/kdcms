@@ -1,0 +1,6 @@
+extends ../../_templates/main-layout.pug
+
+block content
+    div.box
+        input(type="hidden", name="id", value=(role != undefined ? `${role.id}` : ''), disabled=editMode ? null : '')
+        input(type="text", name="title", placeholder="Titel", value=(role != undefined ? `${role.title}` : ''), disabled=editMode ? null : '')

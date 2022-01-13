@@ -1,0 +1,16 @@
+nav.main_menu
+    a(href="/users")#logo 
+        img(src="/img/logo.png")
+    ul
+        li.menu_item 
+            a(href="/users", class=(path.includes('/users') ? 'active' : '')) 
+                include ../../public/img/users.svg
+                span Benutzer
+        li.menu_item 
+            a(href="/roles", class=(path.includes('/roles') ? 'active' : ''))
+                include ../../public/img/clipboard.svg
+                span Rollen
+        li.menu_item 
+            a(href="/rules", class=(path.includes('/rules') ? 'active' : ''))
+                include ../../public/img/unlock.svg
+                span Rechte

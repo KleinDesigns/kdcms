@@ -1,0 +1,19 @@
+extends ../../_templates/main-layout.pug
+
+block content 
+    if data.length > 0
+        ul.items__list.box
+            li.items__list__head
+                div.items__list__head__fields
+                    span.itemdetail Titel
+                    span.itemdetail
+            each item in data
+                li.items__list__item
+                    a(href=`${path}/${item.id}?action=edit`)
+                        div.items__list__item__details
+                           span.itemdetail #{item.title}
+                        div.items__list__item__toolbar
+                            a(href=`${path}/${item.id}?action=edit`).edit.button.svg
+                                include ../../../public/img/edit-2.svg
+                            a(href=`${path}/delete-rule?id=${item.id}`).delete.button.svg
+                                include ../../../public/img/trash-2.svg

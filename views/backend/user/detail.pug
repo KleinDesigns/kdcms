@@ -1,0 +1,8 @@
+extends ../../_templates/main-layout.pug
+
+block content
+    div.box
+        input(type="text", name="firstname", placeholder="Vorname", value=(user != undefined ? `${user.firstname}` : ''), disabled=editMode ? null : '')
+        input(type="text", name="lastname", placeholder="Nachname", value=(user != undefined ? `${user.lastname}` : ''), disabled=editMode ? null : '')
+        input(type="text", name="email", placeholder="E-Mail", value=(user != undefined ? `${user.email}` : ''), disabled=editMode ? null : '')
+        input(type="text", name="phone", placeholder="Telefonnummer", value=(user != undefined ? `${user.phone}` : ''), disabled=editMode ? null : '')

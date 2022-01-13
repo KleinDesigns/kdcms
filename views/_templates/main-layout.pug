@@ -1,0 +1,22 @@
+doctype html
+html(lang="de")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Klein Designs - #{pageTitle}
+        link(rel="stylesheet/less", href="/css/main.less")
+        script(src="/js/less.min.js", type="text/javascript")
+    body
+        header
+            include navigation.pug
+        main
+            if form != undefined
+                if form.method == undefined 
+                - form.method = "POST"
+                form(method=`${form.method}`, action=`${form.action}`)
+                    include toolbar.pug
+                    block content
+            else 
+                include toolbar.pug 
+                block content

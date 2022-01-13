@@ -1,0 +1,10 @@
+div.toolbar
+    div.toolbar__pagetitle
+        h1.pageTitle #{pageTitle}
+    div.toolbar__options
+        if toolbarItems != undefined
+            each option in toolbarItems
+                if option.type == 'submit'
+                    button(type="submit", class=`${option.class}`) #{option.text}
+                else
+                    a(href=`${option.link}`, class=`${option.class}`).button #{option.text}

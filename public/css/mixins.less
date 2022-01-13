@@ -1,0 +1,34 @@
+// GRID MIXINS
+.grid(@number:12) {
+    width: 100%;
+    max-width: @grid-column-width * @number;
+    margin: auto;
+}
+
+.box-sizing(@option: border-box) {
+    box-sizing: @option;
+}
+
+// FLEX MIXINS 
+.flex {
+    display: flex;
+    display: -flex;
+}
+.flex-justify-content(@align) {
+    justify-content: @align;
+}
+.flex-justify-self(@align) {
+    justify-self: @align;
+}
+.flex-justify-items(@align) {
+    justify-items: @align;
+}
+.flex-align-items(@align) {
+    align-items: @align;
+}
+.flex-align-self(@align) {
+    align-self: @align;
+}
+.flex-align-content(@align) {
+    align-content: @align;
+}
